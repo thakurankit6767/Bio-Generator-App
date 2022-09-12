@@ -74,7 +74,7 @@ function App() {
     console.log();
   };
   const generateRandomName = () => {
-    let schoolArray = ["Parag", "Sattya", "Deva", "Rupesh"];
+    let schoolArray = ["Ankit", "Aman", "Samadhan", "Naman"];
     setName(schoolArray[Math.floor(Math.random() * 4)]);
   };
 
@@ -90,7 +90,7 @@ function App() {
   };
 
   const generateRandomOccupation = () => {
-    let OccuptionArray = ["Engineer", "Developer", "businessman", "Politacian"];
+    let OccuptionArray = ["Engineer", "Developer", "businessman", "Politacian","commerce"];
     setOccupation(OccuptionArray[Math.floor(Math.random() * 4)]);
     console.log();
   };
