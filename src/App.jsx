@@ -18,7 +18,6 @@ function App() {
   const [isCheckedOccuption, setIsCheckedoccuption] = useState(true);
   const [isCheckedReligion, setIsCheckedReligion] = useState(true);
   const [isCheckedSchool, setIsCheckedSchool] = useState(true);
- 
 
   const handleInputName = (e) => {
     setName(e.target.value);
@@ -62,8 +61,7 @@ function App() {
   const handleGender = (e) => {
     setGender(e.target.value);
   };
-  
-  
+
   const generateRandomSchool = () => {
     let schoolArray = [
       "CSMV School",
@@ -127,183 +125,179 @@ function App() {
       <div className="container">
         <div className="option">
           <h2 className="box-option-div">Options</h2>
-          <form action="">
-            <div className="box">
-              <div className="label-div">
-                <label>Profile Photo:</label>
-              </div>
 
-              <input type="file" onChange={photoUpload}></input>
+          <div className="box">
+            <div className="label-div">
+              <label>Profile Photo:</label>
             </div>
 
-            <div className="box">
-              <div className="label-div">
-                <label>Name:</label>
-              </div>
+            <input type="file" onChange={photoUpload}></input>
+          </div>
 
-              <input
-                type="text"
-                value={name}
-                placeholder="Enter name"
-                onChange={handleInputName}
-              />
-
-              <div className="label-div">
-                <label>Gender:</label>
-              </div>
-
-              <select onChange={(e) => handleGender(e)}>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-              </select>
-              <button className="selectbutton" onClick={generateRandomName}>
-                Random Name
-              </button>
+          <div className="box">
+            <div className="label-div">
+              <label>Name:</label>
             </div>
 
-            <div className="box">
-              <input
-                type="checkbox"
-                value="false"
-                checked={isCheckedLocation}
-                onChange={handleOnChangeLocation}
-              ></input>
-              <div className="label-div">
-                <label>Location:</label>
-              </div>
+            <input
+              type="text"
+              value={name}
+              placeholder="Enter name"
+              onChange={handleInputName}
+            />
 
-              <input
-                type="text"
-                value={location}
-                onChange={handleInputLocation}
-              ></input>
-              <button className="selectbutton" onClick={generateRandomLocation}>
-                Random Location
-              </button>
+            <div className="label-div">
+              <label>Gender:</label>
             </div>
 
-            <div className="box">
-              <input
-                type="checkbox"
-                value="false"
-                checked={isCheckedSchool}
-                onChange={handleOnChangeSchool}
-              ></input>
-              <div className="label-div">
-                <label>School:</label>
-              </div>
+            <select onChange={(e) => handleGender(e)}>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+            <button className="selectbutton" onClick={generateRandomName}>
+              Random Name
+            </button>
+          </div>
 
-              <input
-                type="text"
-                value={school}
-                onChange={handleInputSchool}
-              ></input>
-              <button className="selectbutton" onClick={generateRandomSchool}>
-                Random School
-              </button>
-              <br />
-              <div className="label-div">
-                <label>Specialization:</label>
-              </div>
-
-              <input
-                type="text"
-                value={stream}
-                onChange={handleInputStream}
-              ></input>
-              <button
-                className="selectbutton"
-                onClick={generateRandomSpecialization}
-              >
-                Random Specialization:
-              </button>
+          <div className="box">
+            <input
+              type="checkbox"
+              value="false"
+              checked={isCheckedLocation}
+              onChange={handleOnChangeLocation}
+            ></input>
+            <div className="label-div">
+              <label>Location:</label>
             </div>
 
-            <div className="box">
-              <input
-                type="checkbox"
-                value="false"
-                checked={isCheckedOccuption}
-                onChange={handleOnChangeOccuption}
-              ></input>
-              <div className="label-div">
-                <label>Occupation:</label>
-              </div>
+            <input
+              type="text"
+              value={location}
+              onChange={handleInputLocation}
+            ></input>
+            <button className="selectbutton" onClick={generateRandomLocation}>
+              Random Location
+            </button>
+          </div>
 
-              <input
-                type="text"
-                value={occupation}
-                onChange={handleOccupation}
-              ></input>
-              <button
-                className="selectbutton"
-                onClick={generateRandomOccupation}
-              >
-                Random Occupation
-              </button>
+          <div className="box">
+            <input
+              type="checkbox"
+              value="false"
+              checked={isCheckedSchool}
+              onChange={handleOnChangeSchool}
+            ></input>
+            <div className="label-div">
+              <label>School:</label>
             </div>
 
-            <div className="box">
-              <input
-                type="checkbox"
-                value="false"
-                checked={isCheckedReligion}
-                onChange={handleOnChangeReligion}
-              ></input>
-
-              <div className="label-div">
-                <label>Religious background</label>
-              </div>
-
-              <textarea
-                rows="5"
-                cols="20"
-                value={religion}
-                onChange={handleReligion}
-              ></textarea>
-              <button className="selectbutton" onClick={generateRandomReligion}>
-                Random Religion
-              </button>
+            <input
+              type="text"
+              value={school}
+              onChange={handleInputSchool}
+            ></input>
+            <button className="selectbutton" onClick={generateRandomSchool}>
+              Random School
+            </button>
+            <br />
+            <div className="label-div">
+              <label>Specialization:</label>
             </div>
 
-            <div className="box">
-              <input
-                type="checkbox"
-                value="false"
-                checked={isChecked}
-                onChange={handleOnChange}
-              ></input>
-              <div className="label-div">
-                <label>Meeting Reason:</label>
-              </div>
+            <input
+              type="text"
+              value={stream}
+              onChange={handleInputStream}
+            ></input>
+            <button
+              className="selectbutton"
+              onClick={generateRandomSpecialization}
+            >
+              Random Specialization:
+            </button>
+          </div>
 
-              <textarea
-                className="textarea"
-                rows="5"
-                cols="20"
-                value={meeting}
-                onChange={handleMeeting}
-              ></textarea>
-              <button
-                className="selectbutton"
-                onClick={() => setMeeting("for peace of mind")}
-              >
-                For Peace
-              </button>
-              <button
-                className="selectbutton"
-                onClick={() => setMeeting("for personal reason")}
-              >
-                For Personal Reason
-              </button>
-              <button
-                className="selectbutton"
-                onClick={() => setMeeting("for payer to fill energetic ")}
-              >
-                For Prayer
-              </button>
+          <div className="box">
+            <input
+              type="checkbox"
+              value="false"
+              checked={isCheckedOccuption}
+              onChange={handleOnChangeOccuption}
+            ></input>
+            <div className="label-div">
+              <label>Occupation:</label>
             </div>
-          </form>
+
+            <input
+              type="text"
+              value={occupation}
+              onChange={handleOccupation}
+            ></input>
+            <button className="selectbutton" onClick={generateRandomOccupation}>
+              Random Occupation
+            </button>
+          </div>
+
+          <div className="box">
+            <input
+              type="checkbox"
+              value="false"
+              checked={isCheckedReligion}
+              onChange={handleOnChangeReligion}
+            ></input>
+
+            <div className="label-div">
+              <label>Religious background</label>
+            </div>
+
+            <textarea
+              rows="5"
+              cols="20"
+              value={religion}
+              onChange={handleReligion}
+            ></textarea>
+            <button className="selectbutton" onClick={generateRandomReligion}>
+              Random Religion
+            </button>
+          </div>
+
+          <div className="box">
+            <input
+              type="checkbox"
+              value="false"
+              checked={isChecked}
+              onChange={handleOnChange}
+            ></input>
+            <div className="label-div">
+              <label>Meeting Reason:</label>
+            </div>
+
+            <textarea
+              className="textarea"
+              rows="5"
+              cols="20"
+              value={meeting}
+              onChange={handleMeeting}
+            ></textarea>
+            <button
+              className="selectbutton"
+              onClick={() => setMeeting("for peace of mind")}
+            >
+              For Peace
+            </button>
+            <button
+              className="selectbutton"
+              onClick={() => setMeeting("for personal reason")}
+            >
+              For Personal Reason
+            </button>
+            <button
+              className="selectbutton"
+              onClick={() => setMeeting("for payer to fill energetic ")}
+            >
+              For Prayer
+            </button>
+          </div>
         </div>
 
         <div className="result" id="result">
@@ -331,7 +325,7 @@ function App() {
                     gender == "male" ? " His" : " Her"
                   } religion is ${religion}.`
                 : null}
-              {gender == "male" ? "He" : "She" }
+              {gender == "male" ? "He" : "She"}
               {isChecked ? ` meet you for ${meeting}.` : null}
             </div>
           </div>
