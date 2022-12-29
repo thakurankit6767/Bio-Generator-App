@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  font-family: roboto;
+  padding: 0;
+  margin: 0;
+  
+}
+.App {
+  text-align: center;
+  margin: 1rem;
+  /* border: 5px solid rgb(248, 13, 64); */
+}
+.container {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  /* border: 2px solid red; */
+}
+
+.heading {
+  background-color: #e94f4f;
+  margin-bottom: 1rem;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 10px;
+  border-radius: 10px;
+  position: sticky;
+  top: 0px;
+}
+
+.option {
+  width: 50%;
+  margin: 1rem;
+  /* border: 3px solid rgb(255, 87, 241); */
+  text-align: center;
+  overflow-y: scroll;
+  height: 480px;
+  position: sticky;
+  top: 200px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:  rgb(236, 3, 3);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:#575aff;
+}
+.box {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: rgba(190, 183, 188, 0.2);
+  text-align: center;
+  /* border: 3px solid red; */
+  text-align: left;
+}
+.box-option-div {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #575aff;
+  text-align: center;
+  color: white;
+  position: sticky;
+  top: 0%;
+}
+.label-div {
+  padding: 10px 10px;
+  display: inline-block;
+  /* border: 1px solid red; */
+  align-items: left;
+  font-size: 1rem;
+  font-weight: 700;
+}
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  /* border: 1px solid rgb(240, 37, 37); */
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.result {
+  width: 50%;
+  margin: 1rem;
+  /* border: 3px solid rgb(84, 244, 255); */
+  color: rgb(0, 0, 0);
+}
+
+.imagediv {
+  border-radius: 100%;
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  margin: auto;
+}
+
+.imagediv > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  box-sizing: content-box;
+}
+
+.textarea {
+  padding: 3px;
+  width: 100%;
+  height: 5rem;
+  margin-top: 5px;
+  background-color: #fff7;
+  color: #222;
+  margin: 0;
+}
+
+.selectbutton {
+  padding: 8px 8px;
+  margin: 5px;
+  border: none;
+  transition: 0.3s ease-in-out;
+  border-radius: 10px;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  background-color: #575aff;
+}
+
+.selectbutton:hover {
+  background-color: rgb(94, 223, 43);
+  color: white;
+  border: none;
+}
