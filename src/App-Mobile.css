@@ -55,6 +55,8 @@
     color: white;
     position: sticky;
     top: 0%;
+    font-size: larger;
+    padding: 5px 2px;
   }
 
   .result {
@@ -84,7 +86,7 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   * {
     box-sizing: border-box;
     font-family: roboto;
@@ -145,18 +147,19 @@
   .result {
     width: 100%;
     margin: auto;
-    margin-top:20px;
-    /* border: 5px solid rgb(20, 238, 92); */
+    margin-top: 20px;
+    /* border: 1px solid rgb(142, 145, 143); */
     color: rgb(0, 0, 0);
   }
   .result-div {
     display: flex;
     flex-direction: row;
+    /* background-color: #e94f4f; */
   }
   .imagediv {
     border-radius: 100%;
-    height: 70px;
-    width: 290px;
+    height: 90px;
+    width: 320px;
     border: 1px solid black;
     margin: auto;
   }
@@ -176,7 +179,7 @@
     padding: 3px;
   }
   .box-option-div {
-    padding: 2px ;
+    padding: 2px;
     background-color: #575aff;
     text-align: center;
     color: white;

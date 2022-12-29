@@ -4,19 +4,15 @@ import "./App-Desktop.css";
 import "./App-Mobile.css";
 
 function App() {
-  const [name, setName] = useState("Ankit");
-  const [location, setLocation] = useState("Vasheni");
-  const [stream, setStream] = useState("Commerce");
+  const [name, setName] = useState("Naman");
+  const [location, setLocation] = useState("Kharpada");
+  const [stream, setStream] = useState("Arts");
   const [school, setSchool] = useState("Phunde");
-  const [age, setAge] = useState("");
   const [occupation, setOccupation] = useState("Commerce");
   const [religion, setReligion] = useState("Hindu");
   const [meeting, setMeeting] = useState("Just Conversation");
   const [image, setimage] = useState("./images.png");
   const [gender, setGender] = useState("male");
-  const [to, setTo] = useState("");
-  const [from, setForm] = useState("");
-  const [output, setOutput] = useState("");
   const [isChecked, setIsChecked] = useState(true);
   const [isCheckedLocation, setIsCheckedLocation] = useState(true);
   const [isCheckedOccuption, setIsCheckedoccuption] = useState(true);
@@ -53,9 +49,6 @@ function App() {
   const handleInputSchool = (e) => {
     setSchool(e.target.value);
   };
-  const handleInputAge = (e) => {
-    setSelectionRange(e.target.value);
-  };
   const handleOccupation = (e) => {
     setOccupation(e.target.value);
   };
@@ -68,9 +61,11 @@ function App() {
   const handleGender = (e) => {
     setGender(e.target.value);
   };
+  
+  
   const generateRandomSchool = () => {
     let schoolArray = [
-      "KES Highschool Kelvane",
+      "CSMV School",
       "Tukaram Hari Wajekar",
       "Rayat school",
       "Phunde",
@@ -98,15 +93,15 @@ function App() {
     let OccuptionArray = [
       "Engineer",
       "Developer",
-      "businessman",
+      "Businessman",
       "Politacian",
-      "commerce",
+      "Accountant",
     ];
-    setOccupation(OccuptionArray[Math.floor(Math.random() * 4)]);
+    setOccupation(OccuptionArray[Math.floor(Math.random() * 5)]);
     console.log();
   };
   const generateRandomReligion = () => {
-    let religionArray = ["Hindu", "sikh", "jain", "Buddhist"];
+    let religionArray = ["Hindu", "Sikh", "Jain", "Buddhist"];
     setReligion(religionArray[Math.floor(Math.random() * 4)]);
     console.log();
   };
@@ -153,7 +148,7 @@ function App() {
               />
 
               <div className="label-div">
-                <label>Gender:</label>{" "}
+                <label>Gender:</label>
               </div>
 
               <select onChange={(e) => handleGender(e)}>
@@ -256,7 +251,7 @@ function App() {
               ></input>
 
               <div className="label-div">
-                <label>Religious background</label>{" "}
+                <label>Religious background</label>
               </div>
 
               <textarea
@@ -318,7 +313,7 @@ function App() {
             </div>
 
             <div className="box">
-              {name} {isCheckedLocation ? `is from the ${location}` : null}{" "}
+              {name} {isCheckedLocation ? `is from the ${location}.` : null}
               {isCheckedSchool
                 ? `${
                     gender == "male" ? "He" : "She"
@@ -328,15 +323,15 @@ function App() {
               {isCheckedOccuption
                 ? `${
                     gender == "male" ? " His" : " Her"
-                  } occupation is ${occupation}`
+                  } occupation is ${occupation}.`
                 : null}
               {isCheckedReligion
                 ? `${
                     gender == "male" ? " His" : " Her"
-                  } religion is ${religion}`
-                : null}{" "}
-              {gender == "male" ? "He" : "She"}{" "}
-              {isChecked ? `meet you for ${meeting}` : null}
+                  } religion is ${religion}.`
+                : null}
+              {gender == "male" ? "He" : "She"}
+              {isChecked ? `meet you for ${meeting}.` : null}
             </div>
           </div>
         </div>
