@@ -9,6 +9,7 @@
   text-align: center;
   margin: 1rem;
   /* border: 5px solid rgb(248, 13, 64); */
+  height: 100%;
 }
 .container {
   display: flex;
