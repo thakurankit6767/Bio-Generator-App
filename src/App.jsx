@@ -18,6 +18,7 @@ function App() {
   const [isCheckedOccuption, setIsCheckedoccuption] = useState(true);
   const [isCheckedReligion, setIsCheckedReligion] = useState(true);
   const [isCheckedSchool, setIsCheckedSchool] = useState(true);
+ 
 
   const handleInputName = (e) => {
     setName(e.target.value);
@@ -330,8 +331,8 @@ function App() {
                     gender == "male" ? " His" : " Her"
                   } religion is ${religion}.`
                 : null}
-              {gender == "male" ? "He" : "She"}
-              {isChecked ? `meet you for ${meeting}.` : null}
+              {gender == "male" ? "He" : "She" }
+              {isChecked ? ` meet you for ${meeting}.` : null}
             </div>
           </div>
         </div>
