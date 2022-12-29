@@ -11,7 +11,6 @@
     /* border: 5px solid rgb(103, 13, 248); */
     height: auto;
     overflow: hidden;
-    height: 100%;
   }
   .heading {
     background-color: #e94f4f;
@@ -87,12 +86,6 @@
   }
 }
 
-
-
-
-
-
-
 @media screen and (max-width: 500px) {
   * {
     box-sizing: border-box;
@@ -106,8 +99,6 @@
     /* border: 5px solid rgb(103, 13, 248); */
     height: auto;
     overflow: hidden;
-    width: 100%;
-    height: 100%;
   }
   .heading {
     background-color: #e94f4f;
